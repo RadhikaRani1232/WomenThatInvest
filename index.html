@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Women That Invest – Learn Stocks & ETFs</title>
+
+  <!-- Luxury Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f9fafb;
+      --card: #ffffff;
+      --accent: #f9a8d4; /* baby pink */
+      --accent-strong: #ec4899; /* deeper pink */
+      --accent-soft: #fdf2f8;
+      --text-main: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius-lg: 1.5rem;
+      --radius-sm: 0.9rem;
+      --shadow-soft: 0 18px 40px rgba(148, 163, 184, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      letter-spacing: 0.02em;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 3rem;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: 1rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.3rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      box-shadow: 0 18px 45px rgba(148, 163, 184, 0.25);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .logo-mark {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 160deg,
+        #f9a8d4,
+        #f472b6,
+        #ec4899,
+        #f9a8d4
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .nav-title-main {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+    }
+
+    .nav-title-sub {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      align-items: center;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: background 0.1s ease, border-color 0.1s ease, color 0.1s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--bg-soft);
+      border-color: var(--border);
+    }
+
+    .nav-highlight {
+      background: var(--accent-strong);
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 999px;
+      padding: 0.4rem 1.1rem;
+      box-shadow: 0 10px 25px rgba(236, 72, 153, 0.45);
+    }
+
+    .nav-highlight a {
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.9rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      font-size: 0.8rem;
+      color: #9d174d;
+      font-weight: 500;
+    }
+
+    .hero-pill span {
+      font-size: 1.1rem;
+    }
+
+    .hero-eyebrow {
+      margin-top: 1rem;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.98rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+    }
+
+    .hero-main {
+      margin-top: 0.65rem;
+      font-size: clamp(2.3rem, 4.2vw, 3rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .hero-main span {
+      background-image: linear-gradient(120deg, #ec4899, #f9a8d4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-tagline {
+      margin-top: 0.7rem;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-style: italic;
+      color: #9d174d;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-sub {
+      margin-top: 1.1rem;
+      color: var(--muted);
+      max-width: 36rem;
+      font-size: 0.98rem;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .btn-main,
+    .btn-ghost {
+      padding: 0.78rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.93rem;
+      cursor: pointer;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.08s ease, box-shadow 0.08s ease,
+        background 0.08s ease, border-color 0.08s ease;
+      font-family: "Manrope", system-ui, sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-main {
+      background: linear-gradient(120deg, #ec4899, #f9a8d4);
+      color: white;
+      box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(236, 72, 153, 0.55);
+    }
+
+    .btn-ghost {
+      border-color: var(--border);
+      background: #ffffff;
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+      background: var(--bg-soft);
+      border-color: #d1d5db;
+    }
+
+    .btn-icon {
+      font-size: 1.1rem;
+    }
+
+    .hero-side {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 1.4rem 1.4rem 1.1rem;
+      display: grid;
+      gap: 0.9rem;
+      align-content: start;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-side-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .metric-card {
+      padding: 0.9rem;
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      background: #fdfdfd;
+    }
+
+    .metric-label {
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-weight: 500;
+    }
+
+    .metric-value {
+      font-size: 1.05rem;
+      margin-top: 0.2rem;
+      font-weight: 600;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 0.03em;
+    }
+
+    .metric-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    .hero-disclaimer {
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-radius: 0.8rem;
+      border: 1px dashed var(--border);
+      padding: 0.7rem 0.9rem;
+      background: #f9fafb;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-top: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 26rem;
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-size: 0.76rem;
+      color: #9d174d;
+      background: var(--accent-soft);
+      font-weight: 500;
+    }
+
+    .pill span {
+      font-size: 0.8rem;
+    }
+
+    /* GRID & CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      padding: 1.1rem;
+      display: grid;
+      gap: 0.45rem;
+      box-shadow: 0 10px 25px rgba(148, 163, 184, 0.15);
+    }
+
+    .card-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .card-title {
+      font-size: 1.08rem;
+      font-weight: 500;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 0.04em;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.35rem;
+    }
+
+    .chip {
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-size: 0.76rem;
+      color: #9d174d;
+      background: #fdf2f8;
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    /* ACCORDION SECTIONS */
+    .accordion-section {
+      border-radius: 1.2rem;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 16px 40px rgba(148, 163, 184, 0.18);
+      padding: 0.4rem 0.9rem;
+    }
+
+    .accordion-header {
+      border: none;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0.3rem;
+      cursor: pointer;
+      gap: 1rem;
+    }
+
+    .accordion-header-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .accordion-header-top {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .accordion-header-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 28rem;
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .accordion-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: #9d174d;
+      background: var(--accent-soft);
+      flex-shrink: 0;
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .accordion-header.active .accordion-icon {
+      background: var(--accent-strong);
+      color: #ffffff;
+      border-color: var(--accent-strong);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.25s ease, opacity 0.2s ease;
+      padding: 0 0.3rem;
+    }
+
+    .accordion-body-inner {
+      padding-bottom: 1.1rem;
+      padding-top: 0.2rem;
+    }
+
+    .accordion-body.open {
+      max-height: 2000px; /* just a big number */
+      opacity: 1;
+      margin-top: 0.4rem;
+    }
+
+    /* ABOUT */
+    .about-layout {
+      display: grid;
+      gap: 1.3rem;
+    }
+
+    .about-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 1.3rem;
+      display: grid;
+      gap: 0.6rem;
+      box-shadow: 0 16px 40px rgba(148, 163, 184, 0.2);
+    }
+
+    .about-name {
+      font-weight: 500;
+      font-size: 1.1rem;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-role {
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    .disclaimer {
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-radius: 0.9rem;
+      border: 1px dashed var(--border);
+      padding: 0.9rem 1rem;
+      background: var(--bg-soft);
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      padding-top: 1.3rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    /* RESPONSIVE */
+    @media (min-width: 870px) {
+      .hero {
+        grid-template-columns: 1.3fr 1fr;
+        align-items: start;
+      }
+
+      .about-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        padding-inline: 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-main {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="logo-mark">W</div>
+        <div class="nav-brand-text">
+          <div class="nav-title-main">Women That Invest</div>
+          <div class="nav-title-sub">Investing, explained with elegance</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#accordion-basics">Basics</a>
+        <a href="#accordion-blog">Blog</a>
+        <a href="#accordion-about">About</a>
+        <span class="nav-highlight"><a href="#accordion-basics">Start here</a></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <div>
+        <div class="hero-pill">
+          <span>◎</span> A gentle, thoughtful space to learn about investing.
+        </div>
+        <div class="hero-eyebrow">Women That Invest</div>
+        <h1 class="hero-main">
+          Learn <span>stocks & ETFs</span> in a way that feels calm and clear.
+        </h1>
+        <p class="hero-tagline">
+          Investing made less scary, more you.
+        </p>
+        <p class="hero-sub">
+          This is a quiet, classy corner of the internet where we talk about
+          long-term investing in plain language. No noise, no intimidation —
+          just careful explanations so you can build confidence with your money
+          over time.
+        </p>
+        <div class="hero-actions">
+          <a href="#accordion-basics" class="btn-main">
+            Start with the basics
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="#accordion-blog" class="btn-ghost">
+            Browse current posts
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-side" id="overview">
+        <div class="hero-side-title">What you’ll find here</div>
+        <div class="hero-grid">
+          <div class="metric-card">
+            <div class="metric-label">Level</div>
+            <div class="metric-value">Beginner & early-career</div>
+            <div class="metric-note">
+              We start from “What is a stock?” and build gently, step by step.
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Focus</div>
+            <div class="metric-value">Long-term investing</div>
+            <div class="metric-note">
+              Patience, diversification, and time in the market — not quick wins.
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Tone</div>
+            <div class="metric-value">Calm & thoughtful</div>
+            <div class="metric-note">
+              Clear, respectful explanations. No jargon for the sake of it,
+              and no talking down.
+            </div>
+          </div>
+        </div>
+        <div class="hero-disclaimer">
+          <strong>Disclaimer:</strong> Everything on this site is for general
+          education only and is <strong>not</strong> personal financial advice.
+          Always do your own research and consider speaking with a qualified
+          professional before investing.
+        </div>
+      </aside>
+    </header>
+
+    <!-- ACCORDION: BASICS -->
+    <section id="accordion-basics" class="accordion-section">
+      <button class="accordion-header" data-target="body-basics">
+        <div class="accordion-header-main">
+          <div class="accordion-header-top">
+            <h2 class="section-title">Learning the basics</h2>
+            <div class="pill">
+              <span>✦</span> Beginner friendly
+            </div>
+          </div>
+          <p class="section-sub accordion-header-sub">
+            Start here if you’re new to investing or want a gentle, well-structured
+            refresher on the fundamentals.
+          </p>
+        </div>
+        <div class="accordion-icon">+</div>
+      </button>
+      <div class="accordion-body open" id="body-basics">
+        <div class="accordion-body-inner">
+          <div class="grid">
+            <article class="card">
+              <div class="card-label">Lesson 01</div>
+              <h3 class="card-title">What is a stock?</h3>
+              <p class="card-text">
+                A plain-English walkthrough of what it means to own a “share”
+                of a company, how stocks are created, and why their prices move.
+              </p>
+              <div class="card-meta">You can turn this into a full article later.</div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Lesson 02</div>
+              <h3 class="card-title">ETFs & index funds</h3>
+              <p class="card-text">
+                How ETFs bundle many investments together, why index funds are
+                popular, and key ideas like “expense ratio” and “diversification”.
+              </p>
+              <div class="card-meta">Core concept for long-term investing.</div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Lesson 03</div>
+              <h3 class="card-title">Risk, reward & volatility</h3>
+              <p class="card-text">
+                Understanding that all investing involves risk, what “risk tolerance”
+                means for you, and how time horizon changes the picture.
+              </p>
+              <div class="card-meta">Mindset and math in one place.</div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Lesson 04</div>
+              <h3 class="card-title">Starting as a student</h3>
+              <p class="card-text">
+                A realistic guide to starting small, avoiding common mistakes,
+                and focusing on habits when your budget and time are both limited.
+              </p>
+              <div class="card-meta">
+                Written with students and young professionals in mind.
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION: BLOG -->
+    <section id="accordion-blog" class="accordion-section" style="margin-top: 1.5rem;">
+      <button class="accordion-header" data-target="body-blog">
+        <div class="accordion-header-main">
+          <div class="accordion-header-top">
+            <h2 class="section-title">Blog & journal</h2>
+            <div class="pill">
+              <span>☰</span> Ongoing reflections
+            </div>
+          </div>
+          <p class="section-sub accordion-header-sub">
+            Short, honest pieces about mindset, lessons learned, and the real
+            questions that come up while learning to invest.
+          </p>
+        </div>
+        <div class="accordion-icon">+</div>
+      </button>
+      <div class="accordion-body" id="body-blog">
+        <div class="accordion-body-inner">
+          <div class="grid">
+            <article class="card">
+              <div class="card-label">Blog</div>
+              <h3 class="card-title">“I’ll start later” is the most expensive sentence</h3>
+              <p class="card-text">
+                A simple explanation of compounding and why even small amounts
+                invested consistently can matter a lot over the years.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Mindset</span>
+                <span class="chip">Compounding</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Blog</div>
+              <h3 class="card-title">Red flags in TikTok money content</h3>
+              <p class="card-text">
+                What to watch out for: “guaranteed” returns, secret strategies,
+                no mention of risk, or advice that doesn’t consider your reality.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Social media</span>
+                <span class="chip">Beginner tips</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Blog</div>
+              <h3 class="card-title">Turning investing into a rhythm, not a phase</h3>
+              <p class="card-text">
+                Ideas for gentle routines — how often to check your accounts,
+                what to track, and how to stay grounded when markets feel noisy.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Habits</span>
+                <span class="chip">Long-term</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION: ABOUT -->
+    <section id="accordion-about" class="accordion-section" style="margin-top: 1.5rem;">
+      <button class="accordion-header" data-target="body-about">
+        <div class="accordion-header-main">
+          <div class="accordion-header-top">
+            <h2 class="section-title">About me & this project</h2>
+          </div>
+          <p class="section-sub accordion-header-sub">
+            A little context on who’s behind Women That Invest and what you can
+            expect as this space grows.
+          </p>
+        </div>
+        <div class="accordion-icon">+</div>
+      </button>
+      <div class="accordion-body" id="body-about">
+        <div class="accordion-body-inner">
+          <div class="about-layout">
+            <div class="about-card">
+              <div class="about-name">Radhika Gupta</div>
+              <div class="about-role">
+                Engineering student · Curious investor · Founder of Women That Invest
+              </div>
+              <p class="about-text">
+                I’m a Computer & Electrical Engineering student with a deep
+                interest in how money can be managed thoughtfully, especially
+                for women, students, and first-generation investors. Women That
+                Invest is my personal project to make investing feel less
+                intimidating and more elegant, one explanation at a time.
+              </p>
+              <p class="about-text">
+                As I continue learning — through books, research, conversations,
+                and my own experience — this site will evolve. My goal is to
+                create a calm reference you can return to whenever you feel
+                ready to take another small step with your finances.
+              </p>
+            </div>
+
+            <div class="disclaimer">
+              <strong>Important:</strong> Nothing on Women That Invest is personal,
+              tailored financial advice. It is educational content based on
+              research and my own learning process. Your situation, goals, and
+              risk tolerance are unique — always consider doing your own research
+              and, when needed, speaking with a licensed professional.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>© <span id="year"></span> Women That Invest. All rights reserved.</div>
+      <div>
+        Built as a learning project. The code can grow with your skills and future ideas.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // accordion logic
+    const headers = document.querySelectorAll(".accordion-header");
+    const bodies = document.querySelectorAll(".accordion-body");
+
+    function closeAll() {
+      bodies.forEach(body => body.classList.remove("open"));
+      headers.forEach(h => h.classList.remove("active"));
+      headers.forEach(h => {
+        const icon = h.querySelector(".accordion-icon");
+        if (icon) icon.textContent = "+";
+      });
+    }
+
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const targetId = header.getAttribute("data-target");
+        const targetBody = document.getElementById(targetId);
+        const isOpen = targetBody.classList.contains("open");
+
+        // close everything
+        closeAll();
+
+        // reopen if it was previously closed
+        if (!isOpen) {
+          header.classList.add("active");
+          targetBody.classList.add("open");
+          const icon = header.querySelector(".accordion-icon");
+          if (icon) icon.textContent = "–";
+          // smooth scroll to top of section on open
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+
+    // make basics section header show as active by default
+    const firstHeader = document.querySelector("#accordion-basics .accordion-header");
+    if (firstHeader) {
+      firstHeader.classList.add("active");
+      const icon = firstHeader.querySelector(".accordion-icon");
+      if (icon) icon.textContent = "–";
+    }
+  </script>
+</body>
+</html>
